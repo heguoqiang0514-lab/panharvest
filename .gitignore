@@ -1,0 +1,60 @@
+# ============================================================
+# panharvest —— 进仓库的只有代码，运行时产物一律忽略
+# ============================================================
+
+# —— 运行时数据（最重要的三条）——
+data/
+library/
+reports/
+report_figs/
+report_figs2/
+
+# —— 登录态 / Cookie / 浏览器整包 ——
+config.json
+config.local.json
+data/baidupcs-config/
+data/_profile_quark/
+data/_profile_*/
+*state.db
+*state.db-journal
+
+# —— 外部组件（setup 自动下载，不打进仓库）——
+tools/7z/
+tools/baidupcs/
+tools/*.exe
+tools/*.dll
+
+# —— 与本项目无关的同目录产物 ——
+work/
+learning/
+edited_pages/
+slide-forge/
+*.docx
+*.pdf
+*.pptx
+
+# —— Python ——
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+
+# —— 编辑器 / 系统 ——
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# —— 临时 ——
+*.log
+*.tmp
+*_ui_preview.html
+
+# —— 已脱敏迁出的隐私与登录态（不发布，也不要提交）——
+.private-vault/
+
+# —— 发布产物（由 tools/make_release.py 生成，不提交）——
+dist/

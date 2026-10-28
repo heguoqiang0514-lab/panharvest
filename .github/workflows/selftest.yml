@@ -1,0 +1,36 @@
+name: selftest
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test:
+    name: py${{ matrix.python }} / ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        python: ["3.10", "3.12"]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+
+      # 37 项本地逻辑自检：意图解析 / 打分 / ls 解析 / 解压 / 清洗入库，全程不联网
+      - name: 本地逻辑自检（不联网）
+        run: python -m panharvest selftest
+
+      # 端到端：假 PanSou + 假 PCS + 真压缩包，不需要任何账号
+      - name: 端到端用例（假后端）
+        run: python tests/test_e2e.py
+
+      # 冒烟：CLI 能起来、帮助能打印
+      - name: CLI 冒烟
+        run: python -m panharvest --help

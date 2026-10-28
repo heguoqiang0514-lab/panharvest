@@ -1,0 +1,142 @@
+{
+  "pansou": {
+    "base": "http://127.0.0.1:8888",
+    "token": "",
+    "timeout": 90,
+    "refresh": false
+  },
+  "paths": {
+    "data": "data",
+    "downloads": "data/downloads",
+    "library": "library",
+    "inbox": "data/inbox",
+    "tools": "tools",
+    "reports": "reports"
+  },
+  "backends": {
+    "transfer": "auto",
+    "download": "auto"
+  },
+  "baidupcs": {
+    "exe": "",
+    "config_dir": "data/baidupcs-config",
+    "remote_root": "/资源收割",
+    "threads": 0,
+    "max_files": 2,
+    "keep_remote": true,
+    "download_mode": "locate"
+  },
+  "limits": {
+    "max_candidates": 20,
+    "min_score": 45,
+    "max_total_gb": 60,
+    "max_files": 5000,
+    "search_variants": 3,
+    "verify_top": 12
+  },
+  "extract": {
+    "sevenzip": "",
+    "sevenzr": "",
+    "unrar": "",
+    "max_depth": 3,
+    "delete_archives": false,
+    "timeout": 3600,
+    "passwords": [
+      "1234",
+      "123456",
+      "2048",
+      "1024",
+      "123",
+      "0000",
+      "www.pan.baidu.com",
+      "baidu",
+      "www.baidu.com",
+      "tmd",
+      "解压密码",
+      "66668888"
+    ]
+  },
+  "organize": {
+    "flatten": true,
+    "min_image_bytes": 2048,
+    "junk_suffix": [
+      ".url",
+      ".lnk",
+      ".htm",
+      ".html",
+      ".torrent",
+      ".txt"
+    ],
+    "junk_keywords": [
+      "公众号",
+      "微信",
+      "加群",
+      "群号",
+      "推广",
+      "广告",
+      "更多资源",
+      "免费下载",
+      "扫码",
+      "关注",
+      "www.",
+      "http",
+      "解压密码",
+      "免责声明",
+      "本资源",
+      "版权"
+    ],
+    "media_ext": [
+      ".jpg",
+      ".jpeg",
+      ".png",
+      ".webp",
+      ".gif",
+      ".bmp",
+      ".avif",
+      ".pdf",
+      ".epub",
+      ".mobi",
+      ".azw3",
+      ".azw",
+      ".txt",
+      ".cbz",
+      ".cbr",
+      ".mp4",
+      ".mkv",
+      ".avi",
+      ".flv",
+      ".wmv",
+      ".ts",
+      ".rmvb",
+      ".doc",
+      ".docx",
+      ".ppt",
+      ".pptx",
+      ".xls",
+      ".xlsx"
+    ]
+  },
+  "komga": {
+    "url": "",
+    "user": "",
+    "password": "",
+    "library_id": ""
+  },
+  "ui": {
+    "port": 8765,
+    "open_browser": true
+  },
+  "clouds": [
+    "baidu",
+    "quark",
+    "aliyun",
+    "115",
+    "uc",
+    "xunlei",
+    "123"
+  ],
+  "prefer_clouds": [
+    "baidu"
+  ],
+  "open_when_done": true
+}
